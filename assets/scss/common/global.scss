@@ -46,8 +46,9 @@ li {
       padding: 0 $space-1;
       margin-top: $default-font-size/$line-height-2;
       margin-bottom: 0;
-      columns: 2;
-      column-width: $main-highlights-column-width;
+      text-align: justify;
+      // columns: 2;
+      // column-width: $main-highlights-column-width;
       column-gap: $space-1;
 
       li {

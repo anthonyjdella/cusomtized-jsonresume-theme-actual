@@ -11,7 +11,7 @@ if helper.validArray(resume.projects)
                             | #{' · '}
                         if helper.validArray(project.roles)
                             span(class='roles')!=helper.arrayToPhrase(project.roles)
-                    div(class='description markdown')!=helper.mdToHtml(project.description)
+                    div(class='description markdown')!=helper.mdToHtml(project.summary)
                     if helper.validArray(project.highlights)
                         ul(class='highlights no-break')
                             each highlight in project.highlights

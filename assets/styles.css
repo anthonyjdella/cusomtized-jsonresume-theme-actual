@@ -61,11 +61,10 @@ li {
       padding: 0 10px;
       margin-top: 12.30769px;
       margin-bottom: 0;
-      columns: 2;
-      column-width: 310px;
+      text-align: justify;
       column-gap: 10px; }
       .table .main .highlights li {
-        font-size: 14px;
+        font-size: 15px;
         list-style: none;
         line-height: 1.2; }
         .table .main .highlights li:before {
@@ -172,31 +171,32 @@ li {
 .basics .main {
   vertical-align: middle; }
   .basics .main .name {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 1em;
     font-weight: bold;
     display: block;
-    margin-left: -5.6px; }
+    margin-left: -3.5px; }
   .basics .main .label {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1em;
     font-weight: lighter;
     display: block;
-    margin-left: -1.6px; }
+    margin-left: -1.2px; }
 
 .basics .side {
   vertical-align: middle;
   padding-left: 0;
   padding-top: 15px; }
   .basics .side .contact {
-    font-size: 18px;
+    font-size: 14px;
     list-style-type: none; }
     .basics .side .contact li {
       line-height: 1.5em; }
 
 .basics .summary {
   font-size: 16px;
-  padding: 20px 0; }
+  padding: 20px 0;
+  text-align: justify; }
 
 .work .header .table {
   padding: 0; }
@@ -207,7 +207,7 @@ li {
       font-weight: bold;
       display: block; }
     .work .header .table .left .company-location {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: lighter;
       display: block; }
       .work .header .table .left .company-location a {
@@ -241,7 +241,8 @@ li {
 .projects .description {
   font-size: 16px;
   padding: 0;
-  margin-top: 12.30769px; }
+  margin-top: 12.30769px;
+  text-align: justify; }
   .projects .description:empty {
     display: none; }
 

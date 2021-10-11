@@ -15,14 +15,18 @@ const calcLocation = (location) => {
     array.push(location.city)
   }
 
+  if (location.address) {
+    array.push(location.address)
+  }
+
   if (location.region) {
     array.push(location.region)
   }
 
-  if (location.countryCode) {
-    const country = iso.whereAlpha2(location.countryCode)
-    array.push(country && array.length < 2 ? country.country : location.countryCode)
-  }
+  // if (location.countryCode) {
+  //   const country = iso.whereAlpha2(location.countryCode)
+  //   array.push(country && array.length < 2 ? country.country : location.countryCode)
+  // }
 
   return array.length > 0 ? array.join(', ') : null
 }
@@ -34,7 +38,12 @@ const calcDateRange = (start, end) => {
     array.push(beautifyDate(start))
   }
 
-  array.push(end ? beautifyDate(end) : 'Present')
+  if (end == 'present') {
+    array.push('Present')
+  }
+  else {
+    array.push(end ? beautifyDate(end) : 'Present')
+  }
 
   return array.join(' - ')
 }
