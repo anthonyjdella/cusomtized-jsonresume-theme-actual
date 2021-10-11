@@ -1,3 +1,10 @@
+# Cusomtized JSON Resume Theme: Actual
+
+🖼️ This is a slightly tweaked version of the [Actual theme](https://github.com/davcd/jsonresume-theme-actual). Tweaked to fit my design preferences.
+
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
+
 # Actual theme for JSON Resume
 
 Minimalist and modern theme for [JSON Resume](https://jsonresume.org/) standard, designed for
@@ -218,3 +225,4 @@ This theme supports the following JSON paths
 ```
 
 #### `resume.references`, `resume.volunteer` and `resume.publications` fields are not supported yet.
+</details>
