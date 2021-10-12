@@ -1,4 +1,4 @@
-# Cusomtized JSON Resume Theme: Actual
+# Customized JSON Resume Theme: Actual
 
 🖼️ This is a slightly tweaked version of the [Actual theme](https://github.com/davcd/jsonresume-theme-actual). Tweaked to fit my design preferences.
 
