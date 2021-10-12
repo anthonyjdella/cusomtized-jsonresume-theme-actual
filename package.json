@@ -1,16 +1,16 @@
 {
-  "name": "jsonresume-theme-actual",
+  "name": "jsonresume-theme-anthonyjdella-actual",
   "main": "index.js",
   "files": [
     "/assets",
     "index.js"
   ],
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Actual theme for JSON Resume",
-  "author": "David Carvajal",
+  "author": "Anthony Dellavecchia",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davcd/jsonresume-theme-actual"
+    "url": "https://github.com/anthonyjdella/cusomtized-jsonresume-theme-actual"
   },
   "scripts": {
     "create-html": "resume export public/resume.html --format html --theme .",
