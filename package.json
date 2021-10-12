@@ -5,12 +5,12 @@
     "/assets",
     "index.js"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Actual theme for JSON Resume",
   "author": "Anthony Dellavecchia",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anthonyjdella/cusomtized-jsonresume-theme-actual"
+    "url": "https://github.com/anthonyjdella/customized-jsonresume-theme-actual"
   },
   "scripts": {
     "create-html": "resume export public/resume.html --format html --theme .",
