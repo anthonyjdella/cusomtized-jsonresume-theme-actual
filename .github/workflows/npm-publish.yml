@@ -1,57 +1,52 @@
-name: Publish npm package
+name: Publish NPM Package
 on:
   push:
     branches:
       - master
 jobs:
-  version-check:
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.version-check.outputs.changed }}
-      version: ${{ steps.version-check.outputs.version }}
-      commit: ${{ steps.version-check.outputs.commit }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - id: version-check
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
+          node-version: 14
+      - run: |
+          npm ci
+          npm test
 
-  run-test:
-    needs: version-check
-    runs-on: ubuntu-latest
-    if: needs.version-check.outputs.changed == 'true'
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ needs.version-check.outputs.commit }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
-
-  publish-npm:
-    needs: [ version-check, run-test ]
+  publish-npm-registry:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ needs.version-check.outputs.commit }}
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_NPM_TOKEN}}
+  
+  publish-github-registry:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
+          scope: '@anthonyjdella'
+      - run: npm ci
+      - run: echo registry=https://npm.pkg.github.com/anthonyjdella >> .npmrc
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
 
   create-tag:
-    needs: [ version-check, publish-npm ]
+    needs: [ publish-npm-registry, publish-github-registry ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v3
