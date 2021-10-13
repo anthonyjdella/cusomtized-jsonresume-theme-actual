@@ -1,6 +1,6 @@
 # Customized JSON Resume Theme: Actual
 
-🖼️ This is a slightly tweaked version of the [Actual theme](https://github.com/davcd/jsonresume-theme-actual). Tweaked to fit my design preferences.
+🖼️ This is a slightly tweaked version of the [Actual theme](https://github.com/davcd/jsonresume-theme-actual). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
 
 <details>
   <summary>Click to expand README.md of the source repository!</summary>
