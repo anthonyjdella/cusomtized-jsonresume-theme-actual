@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-anthonyjdella-actual",
+  "name": "@anthonyjdella/jsonresume-theme-anthonyjdella-actual",
   "main": "index.js",
   "files": [
     "/assets",
     "index.js"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Actual theme for JSON Resume",
   "author": "Anthony Dellavecchia",
   "repository": {
