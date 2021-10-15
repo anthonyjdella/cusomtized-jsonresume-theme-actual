@@ -5,7 +5,7 @@
     "/assets",
     "index.js"
   ],
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Actual theme for JSON Resume",
   "author": "Anthony Dellavecchia",
   "repository": {
@@ -37,11 +37,12 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "gulp": "^4.0.2",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
     "html-validate": "^4.3.0",
-    "jest": "^26.6.3",
+    "jest": "^27.2.5",
+    "resume-cli": "^3.0.0",
     "semantic-release": "^18.0.0"
   }
 }
