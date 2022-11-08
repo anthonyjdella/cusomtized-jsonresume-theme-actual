@@ -8,4 +8,4 @@ if helper.validArray(resume.skills)
                     if helper.validArray(skill.keywords)
                         ul(class='margin-text-1')
                             each keyword in skill.keywords
-                                li=keyword
+                                li(style='overflow-wrap:anywhere;')=keyword

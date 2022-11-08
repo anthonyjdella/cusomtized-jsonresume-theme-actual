@@ -6,10 +6,12 @@ div(class='basics')
             span(class='summary markdown')!=helper.mdToHtml(resume.basics.summary)
         div(class='side')
             ul(class='contact')
-                li=resume.basics.phone
-                li=resume.basics.email
+                li(class='article')
+                        a(href='tel:'+resume.basics.phone)!=helper.beautifyLink(resume.basics.phone)
                 li(class='article margin-text-2')
                     a(href=resume.basics.website)!=helper.beautifyLink(resume.basics.website)
+                li(class='article')
+                    a(href='mailto:'+resume.basics.email)!=helper.beautifyLink(resume.basics.email)
                 //- li(class='margin-text-3')=helper.calcLocation(resume.basics.location)
                 if resume.basics.url
                     li(class='article')
